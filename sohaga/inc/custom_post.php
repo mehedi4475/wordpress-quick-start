@@ -38,7 +38,45 @@ function codex_book_init() {
 	);
 
 	register_post_type( 'book', $args );
+	
+	//Custom Image Crop
 	add_theme_support( 'post-thumbnails' ); 
+	add_image_size( 'book-home-page', 150, 150);
+	add_image_size( 'book-blog-page', 300, 300);
+	add_image_size( 'book-single-page', 450, 450);
+	add_image_size( 'book-full-page', 1024, 700);
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
+<?php
+//Custom post display
+
+$args = array(
+	'post_type' => 'book',
+);
+
+$book = new WP_Query( $args );
+if ( $book->have_posts($args) ) : ?>
+	<?php while ($book->have_posts() ) : $book->the_post();  ?>
+		<?php	
+			if ( has_post_thumbnail() ) { 
+				the_post_thumbnail( array(300, 300) );
+				//the_post_thumbnail('book-single-page');
+
+			}
+		?>
+	<?php endwhile; ?>
+<?php endif; ?>
+*/
 
 
