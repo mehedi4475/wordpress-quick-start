@@ -7,8 +7,6 @@
 </head>
 <body>
 
-Hello World
-
 
 
 <?php wp_footer(); ?>	
