@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   
 
-	alert("Welcome to Wordpress");
+	//alert("Welcome to Wordpress");
 
 
 })
